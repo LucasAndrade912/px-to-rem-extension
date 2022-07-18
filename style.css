@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 300px;
+  height: 172px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.field {
+  width: 215px;
+  display: flex;
+  align-items: center;
+}
+
+label {
+  font-size: 18px;
+  text-transform: uppercase;
+  margin-right: 12px;
+}
+
+input {
+  width: 100%;
+  height: 25px;
+  padding: 0.25rem;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 1px;
+  outline-color: #9533f0;
+}
+
+img {
+  width: 20px;
+  transform: rotate(90deg);
+  margin: 1rem 0;
+  cursor: pointer;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number]{
+  -moz-appearance: textfield;
+}
