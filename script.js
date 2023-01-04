@@ -1,28 +1,33 @@
 const pxField = document.querySelector('#px')
 const remField = document.querySelector('#rem')
-
 const togglePositionBtn = document.querySelector('#toggle-position-btn')
 
 let flexDirection = 'column'
 
-pxField.addEventListener('change', () => {
-  const result = pxField.value / 16
+pxField.addEventListener('click', () => pxField.select())
 
-  remField.value = result
+pxField.addEventListener('change', () => {
+  const remValue = pxField.value / 16
+
+  remField.value = remValue
 })
 
-remField.addEventListener('change', () => {
-  const result = remField.value * 16
+remField.addEventListener('click', () => remField.select())
 
-  pxField.value = result
+remField.addEventListener('change', () => {
+  const pxValue = remField.value * 16
+
+  pxField.value = pxValue
 })
 
 togglePositionBtn.addEventListener('click', () => {
   if (flexDirection === 'column') {
     document.body.style.flexDirection = 'column-reverse'
     flexDirection = 'column-reverse'
+    remField.focus()
   } else {
     document.body.style.flexDirection = 'column'
     flexDirection = 'column'
+    pxField.focus()
   }
 })
